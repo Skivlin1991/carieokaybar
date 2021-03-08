@@ -1,7 +1,7 @@
-import unittest
+# import unittest
 
-from classes.guests import Ride
-from classes.rooms import Customer
-from classes.songs import ThemePar
+# from classes.guests import Ride
+# from classes.rooms import Customer
+# from classes.songs import ThemePar
 
-class CodeClan_Caraoke:
+# class CodeClan_Caraoke:

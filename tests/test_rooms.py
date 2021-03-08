@@ -1,22 +1,21 @@
 from classes.rooms import Rooms
-from classes.CodeClan_Caraoke import CodeClan_Caraoke
+# from classes.CodeClan_Caraoke import CodeClan_Caraoke
 import unittest
-from classes.guests import guests
+from classes.guests import Guests
 # from classes.songs import songs
 
-class ThemeParkTest(unittest.TestCase):
+class RoomTest(unittest.TestCase):
 
     def setUp(self):
-        self.guests = guests("Buddha", 1000)
-        self.Room = room ("90's pop room", 50)
-        self.Room = room ("rocker's room", 25)
+        self.room1 = Rooms("90's pop room", 50)
+        self.room2 = Rooms("rocker's room", 25)
 
-        Rooms = [self.room1, self.room2]
+    def test_room_has_name(self):
+        self.assertEqual("90's pop room" , self.room1.name) 
+        self.assertEqual("rocker's room" , self.room2.name) 
+    
+    def test_room_has_price(self):
+        self.assertEqual(50, self.room1.price)
 
-        self.CodeClan_Caraoke = CodeClan_Caraoke("CodeClan_Caraoke", Rooms)
 
-    def test_can_sell_ticket_for_entry(self):
-        self.theme_park.sell_ticket_for_ride(self.room1, self.customer)
 
-        self.assertEqual(50, self.CodeClan_Caraoke.total_income)
-        self.assertEqual(950, self.customer.wallet)
